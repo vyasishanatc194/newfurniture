@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!--[if IE]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="styles/HomePage.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="styles/color.css" rel="stylesheet" type="text/css" />
+
+    <link href="styles/noscript.css" rel="stylesheet" type="text/css" id="noscript" media="screen,all" />
+
+    <link rel="stylesheet" href="styles/flexslider.css" type="text/css" media="screen" />
+
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+
+    <script type="text/javascript" src="js/candara.cufonfonts.js"></script>
+
+    <script type="text/javascript" src="js/Tuffy_500-Tuffy_700.font.js"></script>
+
+    <script type="text/javascript" src="js/jquery.lavalamp.js"></script>
+
+    <script type="text/javascript" src="js/lavalamp-config.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easing.1.1.js"></script>
+
+    <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+
+    <script type="text/javascript">
+
+
+
+        Cufon.replace('h1')('h2')('h3')('h4')('h5')('h6');
+
+        Cufon.replace('#topnav li', { hover: true, fontFamily: 'candara' });
+
+        jQuery('#slidercycle').cycle({
+
+            timeout: 5000,  // milliseconds between slide transitions (0 to disable auto advance)
+
+            fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+
+            pager: '#slidernav',  // selector for element to use as pager container
+
+            pause: 0,   // true to enable "pause on hover"
+
+            pauseOnPagerHover: 0 // true to pause when hovering over pager link
+
+        });
+
+    </script>
+
+    <!--Demo Switcher-->
+
+    <link href="styles/teal/teal.css" rel="stylesheet" type="text/css" id="skins-switcher" />
+
+    <link href="styles/colorpicker.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+    <script type="text/javascript" src="js/colorpicker.js"></script>
+
+    <script defer src="js/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            SyntaxHighlighter.all();
+
+        });
+
+        $(window).load(function () {
+
+            $('.flexslider').flexslider({
+
+                animation: "slide",
+
+                controlNav: "thumbnails",
+
+                start: function (slider) {
+
+                    $('body').removeClass('loading');
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <script type="text/javascript">
+        window.onload = AddEvent;
+        var activePage = "Home";
+        var allMenuItems;
+        function AddEvent()
+        {
+          allMenuItems  = document.getElementsByClassName("MainMenuItem");
+            for (var i = 0; i < allMenuItems.length; i++) {
+                allMenuItems[i].addEventListener('click', LoadPage, false);
+            }
+            SetSelectedMenuItemSelected(activePage);
+        }
+     
+        function LoadPage(e)
+        {
+            e = e || window.event;
+            var target = e.target || e.srcElement,
+                text = target.textContent || text.innerText;
+            
+            var contentPage = document.getElementById("ContentBody");
+            
+            if (activePage.toUpperCase() != text.trim().toUpperCase()) {
+                activePage = text.trim();
+
+                var pageNameToLoad = "<iframe id='loadedPage' type='text/html' src='" + activePage + ".html" + "' width='100%' Height='100%' ></object>";
+                contentPage.innerHTML = pageNameToLoad;
+                SetSelectedMenuItemSelected(activePage);
+                var text = document.getElementById('loadedPage');
+                alert(text.childNodes/);
+            }
+        }
+
+        function SetSelectedMenuItemSelected(selectedMenu)
+        {
+
+            for (var i = 0; i < allMenuItems.length; i++) {
+                var item = allMenuItems[i].getElementsByTagName("P")[0];
+                if(item.innerHTML.toUpperCase() == selectedMenu.toUpperCase())
+                {
+                    allMenuItems[i].className = "MainMenuItemSelected";
+                }
+                else
+                {
+                    allMenuItems[i].className = "MainMenuItem";
+                }
+            }
+
+            allMenuItems = document.querySelectorAll('.MainMenuItem, .MainMenuItemSelected');
+
+
+        }
+      
+        $('#objectContent').ready(function () {
+            alert("Loaded via Jquery");
+        });
+        function OnLoadForObjectContent()
+        {
+            alert("Loaded");
+        }
+    </script>
+</head>
+<body>
+    <div class="TopMenu">
+
+        <table cellpadding="5" class="MainMenuTable" style="margin-bottom:-5px;">
+            <tr>
+                <td class="MainMenuItem">
+                    <p>HOME</p>
+                </td>
+                <td class="MainMenuItem">
+                    <p>ABOUT</p>
+                </td>
+                <td class="MainMenuItem">
+                    <p>Quality</p>
+                </td>
+                <td class="MainMenuItem">
+                    <p>PRODUCTS</p>
+                </td>
+                <td class="MainMenuItem">
+                    <p>Catalog</p>
+                </td>
+                <td class="MainMenuItem">
+                    <p>Contact</p>
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+    <div style="margin-top:-55px; margin-left:5%;">
+        <img src="images/mainLogo.png" alt="" title="" />
+    </div>
+   
+
+    <div class="containerBody"  id="ContentBody">
+        <iframe type='text/html' src="Home.html" id="objectContent" onloadstart="OnLoadForObjectContent()" ></iframe>
+    </div>
+
+    
+</body>
+</html>

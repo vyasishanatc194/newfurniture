@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <link rel="shortcut icon" href="images/content/favicon.html" />
+
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta name="keywords" content="" />
+
+    <meta name="title" content="" />
+
+    <meta name="description" content="" />
+
+    <title>New looks furniture</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
+    <!--CSS-->
+
+    <link rel="stylesheet" href="styles/flexslider.css" type="text/css" media="screen" />
+
+    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+
+    <link href="styles/inner.css" rel="stylesheet" type="text/css" />
+
+    <link href="styles/color.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/MenuLoad.js"></script>
+
+
+    <link href="styles/prettyPhoto.css" rel="stylesheet" type="text/css" media="screen"
+
+        title="prettyPhoto main stylesheet" />
+
+    <link href="styles/noscript.css" rel="stylesheet" type="text/css" id="noscript" media="screen,all" />
+
+    <!--Javascript-->
+
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+
+    <script type="text/javascript" src="js/candara.cufonfonts.js"></script>
+
+    <script type="text/javascript" src="js/Tuffy_500-Tuffy_700.font.js"></script>
+
+    <script type="text/javascript" src="js/jquery.lavalamp.js"></script>
+
+    <script type="text/javascript" src="js/lavalamp-config.js"></script>
+
+    <script type="text/javascript" src="js/jquery.easing.1.1.js"></script>
+
+    <script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+
+    <script type="text/javascript" src="js/fade.js"></script>
+
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+
+    <script type="text/javascript">
+
+
+
+        Cufon.replace('h1')('h2')('h3')('h4')('h5')('h6');
+
+        Cufon.replace('#topnav li', { hover: true, fontFamily: 'candara' });
+
+        jQuery('#slidercycle').cycle({
+
+            timeout: 5000,  // milliseconds between slide transitions (0 to disable auto advance)
+
+            fx: 'fade', // choose your transition type, ex: fade, scrollUp, shuffle, etc...     
+
+            pager: '#slidernav',  // selector for element to use as pager container
+
+            pause: 0,   // true to enable "pause on hover"
+
+            pauseOnPagerHover: 0 // true to pause when hovering over pager link
+
+        });
+
+
+
+        jQuery(document).ready(function () {
+
+            /* portfolio gallery */
+
+            jQuery("a[rel^='prettyPhoto']").prettyPhoto({ animationSpeed: 'slow', theme: 'facebook', slideshow: 2000 });
+
+        });
+
+</script>
+
+    <!--Demo Switcher-->
+
+    <link href="styles/teal/teal.css" rel="stylesheet" type="text/css" id="skins-switcher" />
+
+    <link href="styles/colorpicker.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+
+    <script type="text/javascript" src="js/colorpicker.js"></script>
+
+    <script defer src="js/jquery.flexslider.js"></script>
+
+    <script type="text/javascript">
+
+        $(function () {
+
+            SyntaxHighlighter.all();
+
+        });
+
+        $(window).load(function () {
+
+            $('.flexslider').flexslider({
+
+                animation: "slide",
+
+                controlNav: "thumbnails",
+
+                start: function (slider) {
+
+                    $('body').removeClass('loading');
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</head>
+
+<body>
+  
+    <div class="TopImageContainer">
+        <img src="images/product-banner.jpg" alt="" /></p>
+    </div>
+            <div class="AboutBox">
+              
+                <p class="heading">Company Profile</p>
+                        <p style="float:left; color:black;">
+
+                            Established in the year 2014, we <b>New Looks Furniture</b> are engaged in the manufacturing
+
+                            chairs. These chairs are aesthetically appealing, highly comfortable, and are available
+
+                            with different & creative designs & styles. Our supplied chairs are ideal for both
+
+                            indoor and outdoor spaces and are extensively used in homes, hotels, resorts and
+
+                            offices. We have been able to carve a niche for ourselves in the industry. Owing
+
+                            to his vast industry experience and perseverance.
+
+                        </p>
+
+                        <p style="text-align:center;">
+
+               
+                        <p style="color:black;">
+
+                            All our business activities like the administration, finance, marketing, import
+
+                            and advertising are professionally managed by our different departments. Under the
+
+                            able guidance of our Director Mr. Jigar Kadiya and Mr. Hardik Kadiya, we have been
+
+                            able to maintain the superior quality of our product..
+
+                        </p>
+
+                        <p style="color:black;">
+
+                            Owing to the above features, our range of Chairs is broadly used in homes, offices
+
+                            as well as commercial spaces.
+
+                        </p>
+
+                     
+                <p class="heading">Client</p>
+                <ul class="clientList">
+                    <li><img src="images/Clients/Client_1.png"/></li>
+                    <li><img src="images/Clients/Client_2.png" /></li>
+                    <li><img src="images/Clients/Client_3.png" /></li>
+                    <li><img src="images/Clients/Client_4.png" /></li>
+                    <li><img src="images/Clients/Client_5.png" /></li>
+                    <li><img src="images/Clients/Client_6.png" /></li>
+                </ul>
+                    </div>
+
+                  
+
+
+</body>
+
+</html>
+

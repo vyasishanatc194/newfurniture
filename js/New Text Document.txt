@@ -1,0 +1,12 @@
+alert("skfjsdkf");
+window.onload = AddEvent;
+function AddEvent() {
+    alert("Hello");
+    allMenuItems = document.getElementsByClassName("MainMenuItem");
+    for (var i = 0; i < allMenuItems.length; i++) {
+        allMenuItems[i].addEventListener('click', LoadPage, false);
+    }
+    var arr = location.pathname.split('/').pop();
+    alert(arr);
+    SetSelectedMenuItemSelected(activePage);
+}

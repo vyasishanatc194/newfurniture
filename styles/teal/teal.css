@@ -1,0 +1,17 @@
+
+#container-wrapper, #container-wrapper-inner{background:url(strip.png) repeat-x;}
+#left-ribbon{background:url(left-ribbon.png) no-repeat;}
+#right-ribbon{background:url(right-ribbon.png) no-repeat;}
+#nav{background:url(strip.png) repeat-x;}
+
+
+a, a:visited, .titlecolor, .colortext, #content h1, #content h2, #content h3, #content h4, #content h5, #content h6, .dropcap1
+{
+    color:#eef5f1
+ ;}
+
+
+
+#topnav ul{ background:#5e9ba3;}
+#topnav li li{background:url(dropdown-line.gif) repeat-x; background-position:bottom}
+#logo{background:url(bg-logo.png) no-repeat}

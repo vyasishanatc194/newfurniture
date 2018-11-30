@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function LoadPage(pageName)
+        {
+            alert("Hello");
+            var contentPage = document.getElementById("ContentBody");
+            var pageNameToLoad = "<object type='text/html' data='"+pageName + ".html"+"' ></object>";
+            alert(pageNameToLoad);
+            contentPage.innerHTML = pageNameToLoad;
+        }
+        
+    </script>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div>
+        <ul style="float:left">
+            <li ><input type="button" onclick="LoadPage('about')" value="about" /></li>
+            <li><input type="button" onclick="LoadPage('MeshChairs')" value="Page2" /></li>
+        </ul>
+    </div>
+    <div id="ContentBody">
+        <object type='text/html' data='NewArrival.html'></object>
+        
+    </div>
+</body>
+</html>
